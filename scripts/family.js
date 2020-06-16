@@ -73,13 +73,16 @@ let enemie = {
 }
 
 //stark to middle
+
 ctx.beginPath();
 ctx.globalCompositeOperation='destination-over';
-ctx.moveTo(family.x+100,family.y+100);
-ctx.lineTo(family4.x+100, family4.y+100);
+ctx.moveTo(family.x+160,family.y+100);
+ctx.lineTo(family4.x+120, family4.y+100);
 ctx.lineWidth = 10;
 ctx.strokeStyle = enemie.color
 ctx.stroke();
+
+
 
 //cerf to middle
 
@@ -94,7 +97,7 @@ ctx.stroke();
 ctx.beginPath();
 ctx.globalCompositeOperation='destination-over';
 ctx.moveTo(family2.x+100,family2.y+100);
-ctx.lineTo(family4.x+100, family4.y+100);
+ctx.lineTo(family4.x+160, family4.y+100);
 ctx.strokeStyle = allie.color
 ctx.stroke();
 
