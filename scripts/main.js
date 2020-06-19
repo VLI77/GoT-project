@@ -1,137 +1,216 @@
-        
-class circle{
-  
-    constructor(width, height, borderRadius, backgroundColor,link){
-        this.container = document.createElement('a');
-        this.container.href = link
-        this.container.style.backgroundColor = backgroundColor;
-        this.container.style.width =  width;
-        this.container.style.height =  height;
-        this.container.style.borderRadius  = borderRadius;
-        this.container.style.position = 'absolute';
-        this.container.style.left = "47%";
-        this.container.style.top = "45%";
-        this.container.style.opacity = "0"
-
-    
-    }
-
-    display()
-  {
-    document.querySelector("body").appendChild(this.container)
-
-    window.addEventListener('load',()=>{
-
-        ch1.container.style.transform = "translateX(15vw)"
-        ch2.container.style.transform = "translateX(-15vw)"
-        ch3.container.style.transform = "translateY(33vh)"
-        ch4.container.style.transform = "translateY(-30vh)"
-        ch5.container.style.transform = "translate(-11vw, 22vh)"
-        ch6.container.style.transform = "translate( 11vw,-22vh)"
-        ch7.container.style.transform = "translate(12vw,22vh)"
-        ch8.container.style.transform = "translate(-12vw,-20vh)"
-        this.container.style.opacity = "1"
-        ch8.container.style.transition = " 0.5s"
-        ch4.container.style.transition = " 0.5s 0.2s"
-        ch6.container.style.transition = " 0.5s 0.4s"
-        ch1.container.style.transition = " 0.5s 0.6s"
-        ch7.container.style.transition = " 0.5s 0.8s"
-        ch3.container.style.transition = " 0.5s 1s"
-        ch5.container.style.transition = " 0.5s 1.2s"
-        ch2.container.style.transition = " 0.5s 1.4s"
-    })
+let canvas = document.querySelector(".canvas");
+let ctx = canvas.getContext("2d");
 
 
-  }
-    
-
+const sizes = {
+    width: null,
+    height: null,
 }
 
-class emblem{
-
-  constructor(src){
-    this.container = document.createElement('img');
-    this.container.src = src
-    this.container.style.position = 'absolute';
-    this.container.style.left = "47%";
-    this.container.style.top = "45%";
-    this.container.style.opacity = "0"
-
-}
-
-display2(){
-  document.querySelector("body").appendChild(this.container)
-
-      window.addEventListener('load',()=>{
-
-        img1.container.style.transform = "translate(-40vw,-40vh)"
-        img1.container.style.transition = " 0.5s"
-        img2.container.style.transform = "translate(-40vw,-20vh)"
-        img2.container.style.transition = " 0.5s 0.4s"
-        img3.container.style.transform = "translate(-40vw, 0vh)"
-        img3.container.style.transition = " 0.5s 0.8s"
-        img4.container.style.transform = "translate(-40vw, 20vh)"
-        img4.container.style.transition = " 0.5s 1.2s"
-        img5.container.style.transform = "translate(-40vw,40vh)"
-        img5.container.style.transition = " 0.5s 1.6s"
-
-        this.container.style.opacity = "1"
-
-        img6.container.style.transform = "translate(40vw,-40vh)"
-        img6.container.style.transition = " 0.5s 0.2s"
-        img7.container.style.transform = "translate(40vw,-20vh)"
-        img7.container.style.transition = " 0.5s 0.6s"
-        img8.container.style.transform = "translate(40vw, 0vh)"
-        img8.container.style.transition = " 0.5s 1s"
-        img9.container.style.transform = "translate(40vw, 20vh)"
-        img9.container.style.transition = " 0.5s 1.4s"
-        img10.container.style.transform = "translate(40vw,40vh)"
-        img10.container.style.transition = " 0.5s 1.8s"
-    })
-    }
+const resize = ()=>{
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+    canvas.width = sizes.width
+    canvas.height = sizes.height +200
+    console.log(sizes);
 }
 
 
-  const img1 = new emblem("./images/family_lion.png")
-  const img2 = new emblem("./images/family_lion.png")
-  const img3 = new emblem("./images/family_lion.png")
-  const img4 = new emblem("./images/family_lion.png")
-  const img5 = new emblem("./images/family_lion.png")
-  const img6 = new emblem("./images/family_lion.png")
-  const img7 = new emblem("./images/family_lion.png")
-  const img8 = new emblem("./images/family_lion.png")
-  const img9 = new emblem("./images/family_lion.png")
-  const img10 = new emblem("./images/family_lion.png")
+window.addEventListener('resize', resize)
+resize()
+
+function getCursorPosition(canvas, event) {
+    const rect = canvas.getBoundingClientRect()
+    const x = event.clientX - rect.left
+    const y = event.clientY - rect.top
+    console.log("x: " + x + " y: " + y)
+}
 
 
-  const ch1 = new circle("100px", "100px","100%","red","index.html")
-  const ch2 = new circle("100px", "100px","100%","blue","index.html")
-  const ch3= new circle("100px", "100px","100%","green","index.html")
-  const ch4 = new circle("100px", "100px","100%","yellow","index.html")
+canvas.addEventListener('mousedown', function(e) {
+    getCursorPosition(canvas, e)
+})
 
-  const ch5= new circle("100px", "100px","100%" ,"pink","index.html")
-  const ch6 = new circle("100px", "100px","100%" ,"black","index.html")
-  const ch7= new circle("100px", "100px","100%" ,"white","index.html")
-  const ch8 = new circle("100px", "100px","100%" ,"brown","index.html")
+    let ellipse = document.querySelector(".ellipse");
+    let ellipse2 = document.querySelector(".ellipse2");
+    let  ellipse3= document.querySelector(".ellipse3");
+    let  ellipse4= document.querySelector(".ellipse4");
+    let  ellipse5= document.querySelector(".ellipse5");
+    let  ellipse6= document.querySelector(".ellipse6");
+    let  ellipse7= document.querySelector(".ellipse7");
+    let  ellipse8= document.querySelector(".ellipse8");
+    let  ellipse9= document.querySelector(".ellipse9");
+    let  ellipse10= document.querySelector(".ellipse10");
+    let  ellipse11= document.querySelector(".ellipse11");
+    let  ellipse12= document.querySelector(".ellipse12");
+    let  ellipse13= document.querySelector(".ellipse13");
+    let  ellipse14= document.querySelector(".ellipse14");
+    let  ellipse15= document.querySelector(".ellipse15");
+    let  ellipse16= document.querySelector(".ellipse16");
+    let  ellipse17= document.querySelector(".ellipse17");
+    let  ellipse18= document.querySelector(".ellipse18");
+    let  ellipse19= document.querySelector(".ellipse19");
+    let  ellipse20= document.querySelector(".ellipse20");
+    let  ellipse21= document.querySelector(".ellipse21");
+    let  ellipse22= document.querySelector(".ellipse22");
+    let  ellipse23= document.querySelector(".ellipse23");
+    let  ellipse24= document.querySelector(".ellipse24");
+    let  ellipse25= document.querySelector(".ellipse25");
+    let  ellipse26= document.querySelector(".ellipse26");
+    let  ellipse27= document.querySelector(".ellipse27");
+    let  ellipse28= document.querySelector(".ellipse28");
+    let  ellipse29= document.querySelector(".ellipse29");
+    let  ellipse30= document.querySelector(".ellipse30");
+    let  ellipse31= document.querySelector(".ellipse31");
+    let  ellipse32= document.querySelector(".ellipse32");
+    let  ellipse33= document.querySelector(".ellipse33");
+    let  ellipse34= document.querySelector(".ellipse34");
+    let  ellipse35= document.querySelector(".ellipse35");
+    let  ellipse36= document.querySelector(".ellipse36");
+    let  ellipse37= document.querySelector(".ellipse37");
+    let  ellipse38= document.querySelector(".ellipse38");
+    let  ellipse39= document.querySelector(".ellipse39");
+    let  ellipse40= document.querySelector(".ellipse40");
+    let  ellipse41= document.querySelector(".ellipse41");
+    let  ellipse42= document.querySelector(".ellipse42");
+    let  ellipse43= document.querySelector(".ellipse43");
+    let  ellipse44= document.querySelector(".ellipse44");
+    let  ellipse45= document.querySelector(".ellipse45");
+    let  ellipse46= document.querySelector(".ellipse46");
+    let  ellipse47= document.querySelector(".ellipse47");
+    let  ellipse48= document.querySelector(".ellipse48");
+    let  ellipse49= document.querySelector(".ellipse49");
+    let  ellipse50= document.querySelector(".ellipse50");
+    let  ellipse51= document.querySelector(".ellipse51");
+    let  ellipse52= document.querySelector(".ellipse52");
+    let  ellipse53= document.querySelector(".ellipse53");
+    let  ellipse54= document.querySelector(".ellipse54");
+    let  ellipse55= document.querySelector(".ellipse55");
+    let  ellipse56= document.querySelector(".ellipse56");
+    let  ellipse57= document.querySelector(".ellipse57");
 
-  
-  ch1.display()
-  ch2.display()  
-  ch3.display()
-  ch4.display()
-  ch5.display()
-  ch6.display()
-  ch7.display()
-  ch8.display()
-  img1.display2()
-  img2.display2()
-  img3.display2()
-  img4.display2()
-  img5.display2()
-  img6.display2()
-  img7.display2()
-  img8.display2()
-  img9.display2()
-  img10.display2()
+    let ch = {x: 736, y: 132,}
+    let ch2 = { x: 775, y: 135,}
+    let ch3 = { x: 815, y: 145,}
+    let ch4 = { x: 857, y: 160,}
+    let ch5 = { x: 900, y: 180,}
+    let ch6 = { x: 940, y: 200,}
+    let ch7 = { x: 975, y: 226,}
+    let ch8 = { x: 1000, y: 261,}
+    let ch9 = { x: 1030, y: 300,}
+    let ch10 = { x: 1055, y: 340,}
+    let ch11 = { x: 1065, y: 380,}
+    let ch12 = { x: 1075, y: 420,}
+    let ch13 = { x: 1080, y: 457,}
+    let ch14 = { x: 1085, y: 497,}
+    let ch15 = { x: 1080, y: 540,}
+    let ch16 = { x: 1070, y: 580,}
+    let ch17 = { x: 1055, y: 620,}
+    let ch18 = { x: 1035, y: 655,}
+    let ch19 = { x: 1015, y: 690,}
+    let ch20 = { x: 990, y: 725,}
+    let ch21 = { x: 960, y: 755,}
+    let ch22 = { x: 925, y: 775,}
+    let ch23 = { x: 895, y: 795,}
+    let ch24 = { x: 860, y: 805,}
+    let ch25 = { x: 825, y: 820,}
+    let ch26 = { x: 790, y: 825,}
+    let ch27 = { x: 760, y: 825,}
+    let ch28 = { x: 730, y: 825,}
+    let ch29 = { x: 700, y: 825,}
+    let ch30 = { x: 665, y: 820,}
+    let ch31 = { x: 630, y: 815,}
+    let ch32 = { x: 600, y: 805,}
+    let ch33 = { x: 570, y: 795,}
+    let ch34 = { x: 540, y: 780,}
+    let ch35 = { x: 515, y: 755,}
+    let ch36 = { x: 485, y: 735,}
+    let ch37 = { x: 460, y: 705,}
+    let ch38 = { x: 435, y: 675,}
+    let ch39 = { x: 415, y: 645,}
+    let ch40 = { x: 400, y: 615,}
+    let ch41 = { x: 395, y: 580,}
+    let ch42 = { x: 390, y: 540,}
+    let ch43 = { x: 385, y: 505,}
+    let ch44 = { x: 380, y: 470,}
+    let ch45 = { x: 383, y: 430,}
+    let ch46 = { x: 390, y: 395,}
+    let ch47 = { x: 400, y: 360,}
+    let ch48 = { x: 410, y: 330,}
+    let ch49 = { x: 430, y: 295,}
+    let ch50 = { x: 455, y: 260,}
+    let ch51 = { x: 485, y: 230,}
+    let ch52 = { x: 515, y: 205,}
+    let ch53 = { x: 550, y: 185,}
+    let ch54 = { x: 590, y: 165,}
+    let ch55 = { x: 630, y: 145,}
+    let ch56 = { x: 665, y: 135,}
+    let ch57 = { x: 700, y: 130,}
 
+
+
+
+function draw(){
+    ctx.fillStyle = "rgb(200,0,0)";
+    ctx.drawImage(ellipse, ch.x, ch.y,40,40);
+    ctx.drawImage(ellipse2, ch2.x, ch2.y,40,40);
+    ctx.drawImage(ellipse3, ch3.x, ch3.y,40,40);
+    ctx.drawImage(ellipse4, ch4.x, ch4.y,40,40);
+    ctx.drawImage(ellipse5, ch5.x, ch5.y,40,40);
+    ctx.drawImage(ellipse6, ch6.x, ch6.y,40,40);
+    ctx.drawImage(ellipse7, ch7.x, ch7.y,40,40);
+    ctx.drawImage(ellipse8, ch8.x, ch8.y,40,40);
+    ctx.drawImage(ellipse9, ch9.x, ch9.y,40,40);
+    ctx.drawImage(ellipse10, ch10.x, ch10.y,40,40);
+    ctx.drawImage(ellipse11, ch11.x, ch11.y,40,40);
+    ctx.drawImage(ellipse12, ch12.x, ch12.y,40,40);
+    ctx.drawImage(ellipse13, ch13.x, ch13.y,40,40);
+    ctx.drawImage(ellipse14, ch14.x, ch14.y,40,40);
+    ctx.drawImage(ellipse15, ch15.x, ch15.y,40,40);
+    ctx.drawImage(ellipse16, ch16.x, ch16.y,40,40);
+    ctx.drawImage(ellipse17, ch17.x, ch17.y,40,40);
+    ctx.drawImage(ellipse18, ch18.x, ch18.y,40,40);
+    ctx.drawImage(ellipse19, ch19.x, ch19.y,40,40);
+    ctx.drawImage(ellipse20, ch20.x, ch20.y,40,40);
+    ctx.drawImage(ellipse21, ch21.x, ch21.y,40,40);
+    ctx.drawImage(ellipse22, ch22.x, ch22.y,40,40);
+    ctx.drawImage(ellipse23, ch23.x, ch23.y,40,40);
+    ctx.drawImage(ellipse24, ch24.x, ch24.y,40,40);
+    ctx.drawImage(ellipse25, ch25.x, ch25.y,40,40);
+    ctx.drawImage(ellipse26, ch26.x, ch26.y,40,40);
+    ctx.drawImage(ellipse27, ch27.x, ch27.y,40,40);
+    ctx.drawImage(ellipse28, ch28.x, ch28.y,40,40);
+    ctx.drawImage(ellipse29, ch29.x, ch29.y,40,40);
+    ctx.drawImage(ellipse30, ch30.x, ch30.y,40,40);
+    ctx.drawImage(ellipse31, ch31.x, ch31.y,40,40);
+    ctx.drawImage(ellipse32, ch32.x, ch32.y,40,40);
+    ctx.drawImage(ellipse33, ch33.x, ch33.y,40,40);
+    ctx.drawImage(ellipse34, ch34.x, ch34.y,40,40);
+    ctx.drawImage(ellipse35, ch35.x, ch35.y,40,40);
+    ctx.drawImage(ellipse36, ch36.x, ch36.y,40,40);
+    ctx.drawImage(ellipse37, ch37.x, ch37.y,40,40);
+    ctx.drawImage(ellipse38, ch38.x, ch38.y,40,40);
+    ctx.drawImage(ellipse39, ch39.x, ch39.y,40,40);
+    ctx.drawImage(ellipse40, ch40.x, ch40.y,40,40);
+    ctx.drawImage(ellipse41, ch41.x, ch41.y,40,40);
+    ctx.drawImage(ellipse42, ch42.x, ch42.y,40,40);
+    ctx.drawImage(ellipse43, ch43.x, ch43.y,40,40);
+    ctx.drawImage(ellipse44, ch44.x, ch44.y,40,40);
+    ctx.drawImage(ellipse45, ch45.x, ch45.y,40,40);
+    ctx.drawImage(ellipse46, ch46.x, ch46.y,40,40);
+    ctx.drawImage(ellipse47, ch47.x, ch47.y,40,40);
+    ctx.drawImage(ellipse48, ch48.x, ch48.y,40,40);
+    ctx.drawImage(ellipse49, ch49.x, ch49.y,40,40);
+    ctx.drawImage(ellipse50, ch50.x, ch50.y,40,40);
+    ctx.drawImage(ellipse51, ch51.x, ch51.y,40,40);
+    ctx.drawImage(ellipse52, ch52.x, ch52.y,40,40);
+    ctx.drawImage(ellipse53, ch53.x, ch53.y,40,40);
+    ctx.drawImage(ellipse54, ch54.x, ch54.y,40,40);
+    ctx.drawImage(ellipse55, ch55.x, ch55.y,40,40);
+    ctx.drawImage(ellipse56, ch56.x, ch56.y,40,40);
+    ctx.drawImage(ellipse57, ch57.x, ch57.y,40,40);
+
+}
+
+draw()
 
