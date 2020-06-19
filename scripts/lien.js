@@ -35,6 +35,8 @@ if(event.pageX > ch.x && event.pageX < ch.x+40 &&
         ctx.strokeStyle = allie.color
         ctx.stroke();
 
+
+
         ctx.beginPath();
         ctx.globalCompositeOperation='destination-over';
         ctx.save();
