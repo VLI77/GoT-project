@@ -11,7 +11,7 @@ const resize = ()=>{
     sizes.width = window.innerWidth
     sizes.height = window.innerHeight
     canvas.width = sizes.width
-    canvas.height = sizes.height +200
+    canvas.height = sizes.height +150
     console.log(sizes);
 
 }
@@ -160,16 +160,16 @@ canvas.addEventListener('mousedown', function(e) {
     let f10 = document.querySelector('.f10')
 
     
-    let f1_xy = { x: 1210, y: 302,}
-    let f2_xy = { x: 1310, y: 302,}
-    let f3_xy = { x: 1210, y: 402,}
-    let f4_xy = { x: 1310, y: 402,}
-    let f5_xy = { x: 1210, y: 502,}
-    let f6_xy = { x: 1310, y: 502,}
-    let f7_xy = { x: 1210, y: 602,}
-    let f8_xy = { x: 1310, y: 602,}
-    let f9_xy = { x: 1210, y: 702,}
-    let f10_xy = { x: 1310, y: 702,}
+    let f1_xy = { x: 1250, y: 220,}
+    let f2_xy = { x: 1350, y: 220,}
+    let f3_xy = { x: 1250, y: 340,}
+    let f4_xy = { x: 1350, y: 340,}
+    let f5_xy = { x: 1250, y: 460,}
+    let f6_xy = { x: 1350, y: 460,}
+    let f7_xy = { x: 1250, y: 580,}
+    let f8_xy = { x: 1350, y: 580,}
+    let f9_xy = { x: 1250, y: 700,}
+    let f10_xy = { x: 1350, y: 700,}
 
 
 let guerre = document.querySelector('.guerre')
@@ -263,7 +263,7 @@ function draw(){
     ctx.drawImage(amour, 50, 602,70,70);
     ctx.drawImage(relation, 50, 702,70,70);
 
-    ctx.font = "20px Games of Thrones";
+    ctx.font = "18px Game of Thrones";
     ctx.fillStyle = "white";
     ctx.fillText("GUERRE", 150, 245);
     ctx.fillText("HOSTILE", 150, 345);
