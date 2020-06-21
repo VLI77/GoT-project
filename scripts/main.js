@@ -266,11 +266,14 @@ function draw(){
 
 }
 
+const resize = ()=>{
     sizes.width = window.innerWidth
     sizes.height = window.innerHeight
     canvas.width = sizes.width
     canvas.height = sizes.height+150
 
+}
 
-
+window.addEventListener('resize', resize)
+resize()
 
