@@ -7,16 +7,7 @@ const sizes = {
     height: null,
 }
 
-const resize = ()=>{
-    sizes.width = window.innerWidth
-    sizes.height = window.innerHeight
-    canvas.width = sizes.width
-    canvas.height = sizes.height +150
-    console.log(sizes);
 
-}
-window.addEventListener('resize', resize)
-resize()
 
 
 function getCursorPosition(canvas, event) {
@@ -182,6 +173,7 @@ let relation = document.querySelector('.relation')
 
 
 function draw(){
+
     ctx.drawImage(ellipse, ch.x, ch.y,40,40);
     ctx.drawImage(ellipse2, ch2.x, ch2.y,40,40);
     ctx.drawImage(ellipse3, ch3.x, ch3.y,40,40);
@@ -274,5 +266,11 @@ function draw(){
 
 }
 
-draw()
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+    canvas.width = sizes.width
+    canvas.height = sizes.height+150
+
+
+
 
