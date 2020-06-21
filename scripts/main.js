@@ -13,11 +13,11 @@ const resize = ()=>{
     canvas.width = sizes.width
     canvas.height = sizes.height +200
     console.log(sizes);
+
 }
-
-
 window.addEventListener('resize', resize)
 resize()
+
 
 function getCursorPosition(canvas, event) {
     const rect = canvas.getBoundingClientRect()
@@ -148,10 +148,40 @@ canvas.addEventListener('mousedown', function(e) {
     let ch57 = { x: 700, y: 130,}
 
 
+    let f1 = document.querySelector('.f1')
+    let f2 = document.querySelector('.f2')
+    let f3 = document.querySelector('.f3')
+    let f4 = document.querySelector('.f4')
+    let f5 = document.querySelector('.f5')
+    let f6 = document.querySelector('.f6')
+    let f7 = document.querySelector('.f7')
+    let f8 = document.querySelector('.f8')
+    let f9 = document.querySelector('.f9')
+    let f10 = document.querySelector('.f10')
+
+    
+    let f1_xy = { x: 1210, y: 302,}
+    let f2_xy = { x: 1310, y: 302,}
+    let f3_xy = { x: 1210, y: 402,}
+    let f4_xy = { x: 1310, y: 402,}
+    let f5_xy = { x: 1210, y: 502,}
+    let f6_xy = { x: 1310, y: 502,}
+    let f7_xy = { x: 1210, y: 602,}
+    let f8_xy = { x: 1310, y: 602,}
+    let f9_xy = { x: 1210, y: 702,}
+    let f10_xy = { x: 1310, y: 702,}
+
+
+let guerre = document.querySelector('.guerre')
+let hostile = document.querySelector('.hostile')
+let alliance = document.querySelector('.alliance')
+let amitie = document.querySelector('.amitie')
+let amour = document.querySelector('.amour')
+let relation = document.querySelector('.relation')
+
 
 
 function draw(){
-    ctx.fillStyle = "rgb(200,0,0)";
     ctx.drawImage(ellipse, ch.x, ch.y,40,40);
     ctx.drawImage(ellipse2, ch2.x, ch2.y,40,40);
     ctx.drawImage(ellipse3, ch3.x, ch3.y,40,40);
@@ -209,6 +239,38 @@ function draw(){
     ctx.drawImage(ellipse55, ch55.x, ch55.y,40,40);
     ctx.drawImage(ellipse56, ch56.x, ch56.y,40,40);
     ctx.drawImage(ellipse57, ch57.x, ch57.y,40,40);
+
+
+
+
+    ctx.drawImage(f1, f1_xy.x, f1_xy.y,80,90);
+    ctx.drawImage(f2, f2_xy.x, f2_xy.y,80,90);
+    ctx.drawImage(f3, f3_xy.x, f3_xy.y,80,90);
+    ctx.drawImage(f4, f4_xy.x, f4_xy.y,80,90);
+    ctx.drawImage(f5, f5_xy.x, f5_xy.y,80,90);
+    ctx.drawImage(f6, f6_xy.x, f6_xy.y,80,90);
+    ctx.drawImage(f7, f7_xy.x, f7_xy.y,80,90);
+    ctx.drawImage(f8, f8_xy.x, f8_xy.y,80,90);
+    ctx.drawImage(f9, f9_xy.x, f9_xy.y,80,90);
+    ctx.drawImage(f10, f10_xy.x,f10_xy.y,80,90);
+
+
+
+    ctx.drawImage(guerre, 50, 202,70,70);
+    ctx.drawImage(hostile, 50, 302,70,70);
+    ctx.drawImage(alliance, 50, 402,70,70);
+    ctx.drawImage(amitie, 50, 502,70,70);
+    ctx.drawImage(amour, 50, 602,70,70);
+    ctx.drawImage(relation, 50, 702,70,70);
+
+    ctx.font = "20px Games of Thrones";
+    ctx.fillStyle = "white";
+    ctx.fillText("GUERRE", 150, 245);
+    ctx.fillText("HOSTILE", 150, 345);
+    ctx.fillText("ALLIANCE", 150, 445);
+    ctx.fillText("AMITIE", 150, 545);
+    ctx.fillText("AMOUR", 150, 645);
+    ctx.fillText("RELATION SEXUELLES", 150, 745);
 
 }
 
