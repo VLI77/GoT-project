@@ -7,7 +7,16 @@ const sizes = {
     height: null,
 }
 
+const resize = ()=>{
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+    canvas.width = sizes.width
+    canvas.height = sizes.height +200
+    console.log(sizes);
 
+}
+window.addEventListener('resize', resize)
+resize()
 
 
 function getCursorPosition(canvas, event) {
@@ -80,63 +89,63 @@ canvas.addEventListener('mousedown', function(e) {
     let  ellipse56= document.querySelector(".ellipse56");
     let  ellipse57= document.querySelector(".ellipse57");
 
-    let ch = {x: 736, y: 132,}
-    let ch2 = { x: 775, y: 135,}
-    let ch3 = { x: 815, y: 145,}
-    let ch4 = { x: 857, y: 160,}
-    let ch5 = { x: 900, y: 180,}
-    let ch6 = { x: 940, y: 200,}
-    let ch7 = { x: 975, y: 226,}
-    let ch8 = { x: 1000, y: 261,}
-    let ch9 = { x: 1030, y: 300,}
-    let ch10 = { x: 1055, y: 340,}
-    let ch11 = { x: 1065, y: 380,}
-    let ch12 = { x: 1075, y: 420,}
-    let ch13 = { x: 1080, y: 457,}
-    let ch14 = { x: 1085, y: 497,}
-    let ch15 = { x: 1080, y: 540,}
-    let ch16 = { x: 1070, y: 580,}
-    let ch17 = { x: 1055, y: 620,}
-    let ch18 = { x: 1035, y: 655,}
-    let ch19 = { x: 1015, y: 690,}
-    let ch20 = { x: 990, y: 725,}
-    let ch21 = { x: 960, y: 755,}
-    let ch22 = { x: 925, y: 775,}
-    let ch23 = { x: 895, y: 795,}
-    let ch24 = { x: 860, y: 805,}
-    let ch25 = { x: 825, y: 820,}
-    let ch26 = { x: 790, y: 825,}
-    let ch27 = { x: 760, y: 825,}
-    let ch28 = { x: 730, y: 825,}
-    let ch29 = { x: 700, y: 825,}
-    let ch30 = { x: 665, y: 820,}
-    let ch31 = { x: 630, y: 815,}
-    let ch32 = { x: 600, y: 805,}
-    let ch33 = { x: 570, y: 795,}
-    let ch34 = { x: 540, y: 780,}
-    let ch35 = { x: 515, y: 755,}
-    let ch36 = { x: 485, y: 735,}
-    let ch37 = { x: 460, y: 705,}
-    let ch38 = { x: 435, y: 675,}
-    let ch39 = { x: 415, y: 645,}
-    let ch40 = { x: 400, y: 615,}
-    let ch41 = { x: 395, y: 580,}
-    let ch42 = { x: 390, y: 540,}
-    let ch43 = { x: 385, y: 505,}
-    let ch44 = { x: 380, y: 470,}
-    let ch45 = { x: 383, y: 430,}
-    let ch46 = { x: 390, y: 395,}
-    let ch47 = { x: 400, y: 360,}
-    let ch48 = { x: 410, y: 330,}
-    let ch49 = { x: 430, y: 295,}
-    let ch50 = { x: 455, y: 260,}
-    let ch51 = { x: 485, y: 230,}
-    let ch52 = { x: 515, y: 205,}
-    let ch53 = { x: 550, y: 185,}
-    let ch54 = { x: 590, y: 165,}
-    let ch55 = { x: 630, y: 145,}
-    let ch56 = { x: 665, y: 135,}
-    let ch57 = { x: 700, y: 130,}
+    let ch = {x: window.innerWidth*0.48, y: window.innerHeight*0.17,}    
+    let ch2 = {x: window.innerWidth*0.505, y: window.innerHeight*0.175,}
+    let ch3 = {x: window.innerWidth*0.53, y: window.innerHeight*0.190,}
+    let ch4 = {x: window.innerWidth*0.558, y: window.innerHeight*0.210,}
+    let ch5 = {x: window.innerWidth*0.585, y: window.innerHeight*0.235,}
+    let ch6 = {x: window.innerWidth*0.610, y: window.innerHeight*0.265,}
+    let ch7 = {x: window.innerWidth*0.632, y: window.innerHeight*0.300,}
+    let ch8 = {x: window.innerWidth*0.652, y: window.innerHeight*0.342,}
+    let ch9 = {x: window.innerWidth*0.670, y: window.innerHeight*0.394,}
+    let ch10 = {x: window.innerWidth*0.685, y: window.innerHeight*0.450,}
+    let ch11 = {x: window.innerWidth*0.695, y: window.innerHeight*0.50,}
+    let ch12 = {x: window.innerWidth*0.700, y: window.innerHeight*0.55,}
+    let ch13 = {x: window.innerWidth*0.705, y: window.innerHeight*0.605,}
+    let ch14 = {x: window.innerWidth*0.705, y: window.innerHeight*0.660,}
+    let ch15 = {x: window.innerWidth*0.702, y: window.innerHeight*0.715,}
+    let ch16 = {x: window.innerWidth*0.698, y: window.innerHeight*0.77,}
+    let ch17 = {x: window.innerWidth*0.688, y: window.innerHeight*0.82,}
+    let ch18 = {x: window.innerWidth*0.678, y: window.innerHeight*0.87,}
+    let ch19 = {x: window.innerWidth*0.663, y: window.innerHeight*0.92,}
+    let ch20 = {x: window.innerWidth*0.647, y: window.innerHeight*0.96,}
+    let ch21 = {x: window.innerWidth*0.625, y: window.innerHeight*1,}
+    let ch22 = {x: window.innerWidth*0.603, y: window.innerHeight*1.03,}
+    let ch23 = {x: window.innerWidth*0.582, y: window.innerHeight*1.05,}
+    let ch24 = {x: window.innerWidth*0.562, y: window.innerHeight*1.07,}
+    let ch25 = {x: window.innerWidth*0.540, y: window.innerHeight*1.08,}
+    let ch26 = {x: window.innerWidth*0.520, y: window.innerHeight*1.09,}
+    let ch27 = {x: window.innerWidth*0.5, y: window.innerHeight*1.095,}
+    let ch28 = {x: window.innerWidth*0.480, y: window.innerHeight*1.096,}
+    let ch29 = {x: window.innerWidth*0.460, y: window.innerHeight*1.096,}
+    let ch30 = {x: window.innerWidth*0.435, y: window.innerHeight*1.091,}
+    let ch31 = {x: window.innerWidth*0.412, y: window.innerHeight*1.085,}
+    let ch32 = {x: window.innerWidth*0.39, y: window.innerHeight*1.075,}
+    let ch33 = {x: window.innerWidth*0.37, y: window.innerHeight*1.055,}
+    let ch34 = {x: window.innerWidth*0.35, y: window.innerHeight*1.035,}
+    let ch35 = {x: window.innerWidth*0.33, y: window.innerHeight*1.008,}
+    let ch36 = {x: window.innerWidth*0.31, y: window.innerHeight*0.975,}
+    let ch37 = {x: window.innerWidth*0.295, y: window.innerHeight*0.94,}
+    let ch38 = {x: window.innerWidth*0.28, y: window.innerHeight*0.90,}
+    let ch39 = {x: window.innerWidth*0.268, y: window.innerHeight*0.86,}
+    let ch40 = {x: window.innerWidth*0.260, y: window.innerHeight*0.82,}
+    let ch41 = {x: window.innerWidth*0.254, y: window.innerHeight*0.78,}
+    let ch42 = {x: window.innerWidth*0.251, y: window.innerHeight*0.73,}
+    let ch43 = {x: window.innerWidth*0.248, y: window.innerHeight*0.68,}
+    let ch44 = {x: window.innerWidth*0.246, y: window.innerHeight*0.63,}
+    let ch45 = {x: window.innerWidth*0.248, y: window.innerHeight*0.575,}
+    let ch46 = {x: window.innerWidth*0.251, y: window.innerHeight*0.525,}
+    let ch47 = {x: window.innerWidth*0.256, y: window.innerHeight*0.478,}
+    let ch48 = {x: window.innerWidth*0.265, y: window.innerHeight*0.435,}
+    let ch49 = {x: window.innerWidth*0.278, y: window.innerHeight*0.390,}
+    let ch50 = {x: window.innerWidth*0.295, y: window.innerHeight*0.340,}
+    let ch51 = {x: window.innerWidth*0.313, y: window.innerHeight*0.300,}
+    let ch52 = {x: window.innerWidth*0.333, y: window.innerHeight*0.265,}
+    let ch53 = {x: window.innerWidth*0.355, y: window.innerHeight*0.235,}
+    let ch54 = {x: window.innerWidth*0.380, y: window.innerHeight*0.215,}
+    let ch55 = {x: window.innerWidth*0.405, y: window.innerHeight*0.195,}
+    let ch56 = {x: window.innerWidth*0.430, y: window.innerHeight*0.175,}
+    let ch57 = {x: window.innerWidth*0.455, y: window.innerHeight*0.170,}
 
 
     let f1 = document.querySelector('.f1')
@@ -151,16 +160,16 @@ canvas.addEventListener('mousedown', function(e) {
     let f10 = document.querySelector('.f10')
 
     
-    let f1_xy = { x: 1250, y: 220,}
-    let f2_xy = { x: 1350, y: 220,}
-    let f3_xy = { x: 1250, y: 340,}
-    let f4_xy = { x: 1350, y: 340,}
-    let f5_xy = { x: 1250, y: 460,}
-    let f6_xy = { x: 1350, y: 460,}
-    let f7_xy = { x: 1250, y: 580,}
-    let f8_xy = { x: 1350, y: 580,}
-    let f9_xy = { x: 1250, y: 700,}
-    let f10_xy = { x: 1350, y: 700,}
+    let f1_xy = { x: window.innerWidth*0.785, y: window.innerHeight*0.4,}
+    let f2_xy = { x: window.innerWidth*0.855, y: window.innerHeight*0.4,}
+    let f3_xy = { x: window.innerWidth*0.785, y:  window.innerHeight*0.55,}
+    let f4_xy = { x: window.innerWidth*0.855, y: window.innerHeight*0.55,}
+    let f5_xy = { x: window.innerWidth*0.785, y:window.innerHeight*0.7,}
+    let f6_xy = { x: window.innerWidth*0.855, y:window.innerHeight*0.7,}
+    let f7_xy = { x: window.innerWidth*0.785 ,y: window.innerHeight*0.85,}
+    let f8_xy = { x: window.innerWidth*0.855, y: window.innerHeight*0.85,}
+    let f9_xy = { x: window.innerWidth*0.785, y: window.innerHeight*1,}
+    let f10_xy = { x: window.innerWidth*0.855, y: window.innerHeight*1,}
 
 
 let guerre = document.querySelector('.guerre')
@@ -173,7 +182,6 @@ let relation = document.querySelector('.relation')
 
 
 function draw(){
-
     ctx.drawImage(ellipse, ch.x, ch.y,40,40);
     ctx.drawImage(ellipse2, ch2.x, ch2.y,40,40);
     ctx.drawImage(ellipse3, ch3.x, ch3.y,40,40);
@@ -248,32 +256,23 @@ function draw(){
 
 
 
-    ctx.drawImage(guerre, 50, 202,70,70);
-    ctx.drawImage(hostile, 50, 302,70,70);
-    ctx.drawImage(alliance, 50, 402,70,70);
-    ctx.drawImage(amitie, 50, 502,70,70);
-    ctx.drawImage(amour, 50, 602,70,70);
-    ctx.drawImage(relation, 50, 702,70,70);
+    ctx.drawImage(guerre, window.innerWidth*0.032, window.innerHeight*0.27,70,70);
+    ctx.drawImage(hostile, window.innerWidth*0.032,  window.innerHeight*0.4,70,70);
+    ctx.drawImage(alliance, window.innerWidth*0.032, window.innerHeight*0.53,70,70);
+    ctx.drawImage(amitie, window.innerWidth*0.032, window.innerHeight*0.66,70,70);
+    ctx.drawImage(amour, window.innerWidth*0.032,window.innerHeight*0.79,70,70);
+    ctx.drawImage(relation, window.innerWidth*0.032, window.innerHeight*0.92,70,70);
 
-    ctx.font = "18px Game of Thrones";
+    ctx.font = "20px Games of Thrones";
     ctx.fillStyle = "white";
-    ctx.fillText("GUERRE", 150, 245);
-    ctx.fillText("HOSTILE", 150, 345);
-    ctx.fillText("ALLIANCE", 150, 445);
-    ctx.fillText("AMITIE", 150, 545);
-    ctx.fillText("AMOUR", 150, 645);
-    ctx.fillText("RELATION SEXUELLES", 150, 745);
+    ctx.fillText("GUERRE", window.innerWidth*0.1,  window.innerHeight*0.325, );
+    ctx.fillText("HOSTILE",  window.innerWidth*0.1, window.innerHeight*0.455,);
+    ctx.fillText("ALLIANCE",  window.innerWidth*0.1, window.innerHeight*0.585,);
+    ctx.fillText("AMITIE",  window.innerWidth*0.1, window.innerHeight*0.715,);
+    ctx.fillText("AMOUR",  window.innerWidth*0.1, window.innerHeight*0.845,);
+    ctx.fillText("RELATION SEXUELLES",  window.innerWidth*0.1,window.innerHeight*0.975,);
 
 }
 
-const resize = ()=>{
-    sizes.width = window.innerWidth
-    sizes.height = window.innerHeight
-    canvas.width = sizes.width
-    canvas.height = sizes.height+150
-
-}
-
-window.addEventListener('resize', resize)
-resize()
+draw()
 
