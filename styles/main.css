@@ -15,7 +15,12 @@ h1{
   position: absolute;
   font-size: 25px;
   font-family: 'Game of Thrones';
-  left: 36%;
+  left: 35vw;
+}
+
+.season{
+  position: absolute;
+  right: 0;
 }
 
 .canvas{

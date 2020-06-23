@@ -142,7 +142,9 @@ canvas.addEventListener('mousedown', function(e) {
     let ch51 = {x: window.innerWidth*0.313, y: window.innerHeight*0.300,}
     let ch52 = {x: window.innerWidth*0.333, y: window.innerHeight*0.265,}
     let ch53 = {x: window.innerWidth*0.355, y: window.innerHeight*0.235,}
+
     let ch54 = {x: window.innerWidth*0.380, y: window.innerHeight*0.215,}
+
     let ch55 = {x: window.innerWidth*0.405, y: window.innerHeight*0.195,}
     let ch56 = {x: window.innerWidth*0.430, y: window.innerHeight*0.175,}
     let ch57 = {x: window.innerWidth*0.455, y: window.innerHeight*0.170,}
@@ -160,16 +162,16 @@ canvas.addEventListener('mousedown', function(e) {
     let f10 = document.querySelector('.f10')
 
     
-    let f1_xy = { x: window.innerWidth*0.785, y: window.innerHeight*0.4,}
-    let f2_xy = { x: window.innerWidth*0.855, y: window.innerHeight*0.4,}
-    let f3_xy = { x: window.innerWidth*0.785, y:  window.innerHeight*0.55,}
-    let f4_xy = { x: window.innerWidth*0.855, y: window.innerHeight*0.55,}
-    let f5_xy = { x: window.innerWidth*0.785, y:window.innerHeight*0.7,}
-    let f6_xy = { x: window.innerWidth*0.855, y:window.innerHeight*0.7,}
-    let f7_xy = { x: window.innerWidth*0.785 ,y: window.innerHeight*0.85,}
-    let f8_xy = { x: window.innerWidth*0.855, y: window.innerHeight*0.85,}
-    let f9_xy = { x: window.innerWidth*0.785, y: window.innerHeight*1,}
-    let f10_xy = { x: window.innerWidth*0.855, y: window.innerHeight*1,}
+    let f1_xy = { x: window.innerWidth*0.835, y: window.innerHeight*0.3,}
+    let f2_xy = { x: window.innerWidth*0.905, y: window.innerHeight*0.3,}
+    let f3_xy = { x: window.innerWidth*0.835, y:  window.innerHeight*0.45,}
+    let f4_xy = { x: window.innerWidth*0.905, y: window.innerHeight*0.45,}
+    let f5_xy = { x: window.innerWidth*0.835, y:window.innerHeight*0.6,}
+    let f6_xy = { x: window.innerWidth*0.905, y:window.innerHeight*0.6,}
+    let f7_xy = { x: window.innerWidth*0.835 ,y: window.innerHeight*0.75,}
+    let f8_xy = { x: window.innerWidth*0.905, y: window.innerHeight*0.75,}
+    let f9_xy = { x: window.innerWidth*0.835, y: window.innerHeight*0.9,}
+    let f10_xy = { x: window.innerWidth*0.905, y: window.innerHeight*0.9,}
 
 
 let guerre = document.querySelector('.guerre')
@@ -218,7 +220,10 @@ function draw(){
     ctx.drawImage(ellipse34, ch34.x, ch34.y,40,40);
     ctx.drawImage(ellipse35, ch35.x, ch35.y,40,40);
     ctx.drawImage(ellipse36, ch36.x, ch36.y,40,40);
+
     ctx.drawImage(ellipse37, ch37.x, ch37.y,40,40);
+
+
     ctx.drawImage(ellipse38, ch38.x, ch38.y,40,40);
     ctx.drawImage(ellipse39, ch39.x, ch39.y,40,40);
     ctx.drawImage(ellipse40, ch40.x, ch40.y,40,40);
@@ -235,7 +240,9 @@ function draw(){
     ctx.drawImage(ellipse51, ch51.x, ch51.y,40,40);
     ctx.drawImage(ellipse52, ch52.x, ch52.y,40,40);
     ctx.drawImage(ellipse53, ch53.x, ch53.y,40,40);
+
     ctx.drawImage(ellipse54, ch54.x, ch54.y,40,40);
+    
     ctx.drawImage(ellipse55, ch55.x, ch55.y,40,40);
     ctx.drawImage(ellipse56, ch56.x, ch56.y,40,40);
     ctx.drawImage(ellipse57, ch57.x, ch57.y,40,40);
